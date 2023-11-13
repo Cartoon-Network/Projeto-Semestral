@@ -50,9 +50,7 @@ addEventOnElements(navLinks, "click", function () {
 
 
 
-/**
- * Header active
- */
+/* Cabeçalho Ativo no Rolamento */
 
 const header = 
 document.querySelector("[data-header]");
@@ -64,16 +62,15 @@ window.addEventListener("scroll", function () {
 
 
 
-/**
- * Element tilt effect
- */
+/* Efeito de Inclinação em Elementos
+javascript */
 
 const tiltElements = 
 document.querySelectorAll("[data-tilt]");
 
 const initTilt = function (event) {
 
-  /** get tilt element center position */
+  // Cálculo do efeito de inclinação
   const centerX = this.offsetWidth / 2;
   const centerY = this.offsetHeight / 2;
 
@@ -99,9 +96,7 @@ addEventOnElements(tiltElements,
 
 
 
-/**
- * Tab content
- */
+/* Conteúdo de Abas */
 
 const tabBtns = 
 document.querySelectorAll("[data-tab-btn]");
@@ -136,9 +131,7 @@ addEventOnElements(tabBtns, "click", filterContent);
 
 
 
-/**
- * Custom cursor
- */
+/* Cursor Personalizado */
 
 const cursors =
  document.querySelectorAll("[data-cursor]");
@@ -146,7 +139,9 @@ const hoveredElements =
 [...document.querySelectorAll("button"),
  ...document.querySelectorAll("a")];
 
+ // Adicionando ouvinte de evento mousemove
 window.addEventListener("mousemove",
+// Posição do cursor personalizado
  function (event) {
 
   const posX = event.clientX;
@@ -173,7 +168,7 @@ addEventOnElements(hoveredElements,
   }
 });
 
-/** remove hovered class when mouseout on hoverElements */
+// Removendo a classe "hovered"
 addEventOnElements(hoveredElements,
    "mouseout", function () {
   for (let i = 0, len = cursors.length; 
