@@ -1,10 +1,6 @@
 'use strict';
 
-
-
-/**
- * PRELOADER
- */
+/*PRE-CARREGAMENTO*/
 
 const preloader = 
 document.querySelector("[data-preloader]");
@@ -16,10 +12,7 @@ window.addEventListener("DOMContentLoaded",
 });
 
 
-
-/**
- * add event on multiple elements
- */
+/* Adicionar Evento em Múltiplos Elementos */
 
 const addEventOnElements =
  function (elements, eventType, callback) {
@@ -31,9 +24,7 @@ const addEventOnElements =
 
 
 
-/**
- * Mobile navbar toggle
- */
+/*Toggle de Navegação Móvel*/
 
 const navbar =
  document.querySelector("[data-navbar]");
