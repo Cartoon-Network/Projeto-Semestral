@@ -191,6 +191,7 @@ function signInWithGoogle() {
   console.log('Autenticar com Google');
 }
 
+<script>
     function mostrarSubpagina(imagemSrc, titulo, descricao) {
         // Preencher os dados da subpágina
         document.getElementById('subpagina-imagem').innerHTML = '<img src="' + imagemSrc + '" alt="Imagem do Projeto">';
@@ -205,4 +206,4 @@ function signInWithGoogle() {
         // Fechar a subpágina
         document.getElementById('subpagina').style.display = 'none';
     }
-
+</script>

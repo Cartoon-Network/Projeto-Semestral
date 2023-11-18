@@ -465,10 +465,28 @@
    alt="video"
                         class="img-cover">
                     </figure>
-                    <div class="card-icon">
-                      <ion-icon name="logo-youtube"
-                       aria-hidden="true"></ion-icon>
-                    </div>
+                    <div class="exhibition-card">
+                      <figure class="card-banner img-holder" style="--width: 376; --height: 200;" data-tilt>
+                          <!-- Substitua "SEU_CODIGO_EMBED_DO_YOUTUBE" pelo código de incorporação do seu vídeo no YouTube -->
+                          <iframe ="200" src="https://www.youtube.com/watch?v=Td8lnP8p6oU"></iframe>
+                      </figure>
+                      <div class="card-icon" onclick="abrirVideoNoYouTube()">
+                          <ion-icon name="logo-youtube" aria-hidden="true"></ion-icon>
+                      </div>
+                  </div>
+                  
+                  <script>
+                      function abrirVideoNoYouTube() {
+                          // Substitua "SEU_CODIGO_EMBED_DO_YOUTUBE" pelo código de incorporação do seu vídeo no YouTube
+                          var codigoEmbed = "SEU_CODIGO_EMBED_DO_YOUTUBE";
+                  
+                          // Construa a URL do vídeo no YouTube
+                          var urlDoVideo = "https://www.youtube.com/watch?v=" + codigoEmbed;
+                  
+                          // Abre a URL em uma nova janela ou guia
+                          window.open(urlDoVideo);
+                      }
+                  </script>
                   </div>
                 </li>
                 <li>

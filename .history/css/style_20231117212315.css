@@ -61,8 +61,8 @@
   --fontSize-5: 2.4rem;
   --fontSize-6: 1.8rem;
   --fontSize-7: 2rem;
-  --fontSize-8: 2.3rem;
-  --fontSize-9: 2rem;
+  --fontSize-8: 2.1rem;
+  --fontSize-9: 1.5rem;
   --fontSize-10: 2rem;
 
   /* font weight */
@@ -1026,8 +1026,6 @@ textarea.input-field {
 
   .hero .banner-outline::after { right: -15px; }
 
-  .
-
 
 
   /**
@@ -1719,4 +1717,3 @@ textarea.input-field {
 .subpagina-texto p {
   margin-bottom: 20px;
 }
-

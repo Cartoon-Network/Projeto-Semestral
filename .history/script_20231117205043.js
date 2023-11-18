@@ -205,4 +205,4 @@ function signInWithGoogle() {
         // Fechar a subpágina
         document.getElementById('subpagina').style.display = 'none';
     }
-
+</script>

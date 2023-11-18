@@ -82,7 +82,7 @@
           </li>
         </ul>
       </nav>
-      
+
       <a href="cadastro.html" class="btn btn:hover">
         <span class="span">Entrar</span>
 
@@ -226,7 +226,7 @@
               </li>
               <li class="tab-btn-item">
                 <button class="tab-btn title h6"
-                 data-tab-btn="skillset">Habilidades
+                 data-tab-btn="skillset">Conjunto de Habilidades
                 </button>
               </li>
               <li class="tab-btn-item">
@@ -550,7 +550,7 @@
            text-center">
            Vamos trabalhar juntos em meu próximo projeto!
           </h2>
-          <a href="compras.html" class="btn btn:hover">
+          <a href="#" class="btn btn:hover">
             <span class="span">Comprar
               Agora</span>
             <ion-icon name="arrow-forward"
@@ -570,10 +570,10 @@
                 <div class="card-banner img-holder has-before" style="--width: 1000; --height: 763;">
                     <img src="./assets/images/ent.jpg" width="1000" height="763" loading="lazy"
                         alt="Cartaz do projeto: Estúdio de design digital criativo e experiente" class="img-cover">
-                    <a href="#" class="btn btn:hover">
-                        <span class="span">Detalhes do Projeto</span>
-                        <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
-                    </a>
+                        <a href="#" class="btn btn:hover" onclick="mostrarSubpagina('./assets/images/ent.jpg', 'Egg Juggernaut', 'Descrição do projeto Egg Juggernaut')">
+                          <span class="span">Detalhes do Projeto</span>
+                          <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+                      </a>
                 </div>
                 <div class="card-content">
                     <p class="card-subtitle">BluePrint, Robo</p>
@@ -582,6 +582,18 @@
                     </h3>
                 </div>
             </div>
+            <div id="subpagina" class="subpagina">
+              <div class="subpagina-conteudo">
+                  <span id="fechar" class="fechar" onclick="fecharSubpagina()">&times;</span>
+                  <div class="subpagina-imagem">
+                      <!-- Espaço para a imagem -->
+                  </div>
+                  <div class="subpagina-texto">
+                      <h2 id="subpagina-titulo"></h2>
+                      <p id="subpagina-descricao"></p>
+                  </div>
+              </div>
+          </div>
         </li>
         <li class="slider-item">
             <div class="project-card text-center">
@@ -678,15 +690,15 @@
               <figure class="card-banner 
               img-holder" style="--width:
                70; --height: 70;">
-                <img src="./assets/images/prin.jpg"
+                <img src="./assets/images/Shadow-the-Hedgehog.jpg"
                  width="70" height="70"
                   loading="lazy" 
-                  alt="Princesa Elise Terceira."
+                  alt="Shadow o Ouriço."
                   class="img-cover">
               </figure>
               <div>
                 <p class="title h5 card-title">
-                  Princesa Elise Terceira.</p>
+                  Shadow o Ouriço.</p>
                 <p class="card-subtitle">
                   Personagem.</p>
               </div>

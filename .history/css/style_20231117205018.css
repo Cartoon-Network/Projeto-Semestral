@@ -61,9 +61,9 @@
   --fontSize-5: 2.4rem;
   --fontSize-6: 1.8rem;
   --fontSize-7: 2rem;
-  --fontSize-8: 2.3rem;
-  --fontSize-9: 2rem;
-  --fontSize-10: 2rem;
+  --fontSize-8: 1.6rem;
+  --fontSize-9: 1.5rem;
+  --fontSize-10: 1.4rem;
 
   /* font weight */
   --weight-regular: 400;
@@ -861,10 +861,7 @@ body.nav-active { overflow: hidden; }
   margin-block-end: 20px;
 }
 
-.profile-card .card-banner { 
-  display: none; 
-  width: 10%;
-}
+.profile-card .card-banner { display: none; }
 
 .profile-card .card-subtitle {
    font-size: var(--fontSize-10); }
@@ -1026,8 +1023,6 @@ textarea.input-field {
 
   .hero .banner-outline::after { right: -15px; }
 
-  .
-
 
 
   /**
@@ -1093,7 +1088,6 @@ textarea.input-field {
   .profile-card .card-banner {
     display: block;
     border-radius: var(--radius-circle);
-    width: 40%;
   }
 
   .testi .profile-card {
@@ -1266,11 +1260,7 @@ textarea.input-field {
 
 }
 
-.profile-card .card-banner {
-  display: block;
-  border-radius: var(--radius-circle);
-  width: 15%;
-}
+
 
 
 
@@ -1719,4 +1709,3 @@ textarea.input-field {
 .subpagina-texto p {
   margin-bottom: 20px;
 }
-
