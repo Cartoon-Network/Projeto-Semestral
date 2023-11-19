@@ -1741,14 +1741,6 @@ textarea.input-field {
 }
 
 /* Product Details Modal */
-
-/* Container for Product Cards */
-.card-container {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-}
-/* Product Details Modal */
 .modal {
   display: none;
   position: fixed;
@@ -1810,80 +1802,4 @@ textarea.input-field {
 
 .payment-methods li {
   margin-bottom: 5px;
-}
-
-/* Product Card */
-.product-card {
-  cursor: pointer;
-  border: 1px solid var(--border-gainsboro);
-  border-radius: 10px;
-  padding: 15px;
-  margin: 10px;
-  text-align: center;
-  width: 200px; /* Adjust the width as needed */
-}
-
-.product-card img {
-  width: 100%;
-  border-radius: 5px;
-}
-
-.price {
-  font-weight: var(--weight-medium);
-  color: var(--text-black);
-}
-
-/* Search Bar */
-.search-bar {
-  display: flex;
-  align-items: center;
-  margin-left: auto;
-}
-
-.search-bar input {
-  padding: 8px;
-  border: 1px solid var(--border-gainsboro);
-  border-radius: 5px;
-  margin-right: 5px;
-}
-
-.search-btn {
-  background-color: var(--bg-light-gray);
-  border: 1px solid var(--border-gainsboro);
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-/* Shopping Cart */
-.shopping-cart {
-  display: flex;
-  align-items: center;
-  margin-left: 15px;
-  cursor: pointer;
-}
-
-.shopping-cart ion-icon {
-  font-size: 24px;
-  margin-right: 5px;
-}
-
-.cart-count {
-  background-color: var(--bg-light-gray);
-  padding: 5px 10px;
-  border-radius: 50%;
-  font-weight: var(--weight-medium);
-  margin-left: 5px;
-}
-
-/* Adjustments for responsive design */
-@media (max-width: 768px) {
-  .search-bar {
-      margin-left: 0;
-      order: 1;
-  }
-
-  .shopping-cart {
-      order: 2;
-      margin-left: auto;
-  }
 }

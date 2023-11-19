@@ -1837,7 +1837,7 @@ textarea.input-field {
 .search-bar {
   display: flex;
   align-items: center;
-  margin-left: auto;
+  padding-left: 100px;
 }
 
 .search-bar input {
@@ -1845,6 +1845,7 @@ textarea.input-field {
   border: 1px solid var(--border-gainsboro);
   border-radius: 5px;
   margin-right: 5px;
+  padding-left: 1000px;
 }
 
 .search-btn {

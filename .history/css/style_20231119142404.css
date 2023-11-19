@@ -1837,7 +1837,8 @@ textarea.input-field {
 .search-bar {
   display: flex;
   align-items: center;
-  margin-left: auto;
+  justify-content: center;
+  
 }
 
 .search-bar input {

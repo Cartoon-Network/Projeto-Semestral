@@ -1837,14 +1837,14 @@ textarea.input-field {
 .search-bar {
   display: flex;
   align-items: center;
-  margin-left: auto;
+  padding-left: 100px;
 }
 
 .search-bar input {
   padding: 8px;
   border: 1px solid var(--border-gainsboro);
   border-radius: 5px;
-  margin-right: 5px;
+  margin-right: 400px;
 }
 
 .search-btn {
@@ -1852,6 +1852,7 @@ textarea.input-field {
   border: 1px solid var(--border-gainsboro);
   border-radius: 5px;
   cursor: pointer;
+  margin-right: ;
 }
 
 /* Shopping Cart */
