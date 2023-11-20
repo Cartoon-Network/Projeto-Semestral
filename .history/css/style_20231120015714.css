@@ -1108,127 +1108,6 @@ textarea.input-field {
 }
 
 
-@media (min-width: 730px) and (max-width: 1600px) {
-
-  /**
-   * CUSTOM PROPERTY
-   */
-
-  :root {
-
-    /**
-     * TYPOGRAPHY
-     */
-
-    /* font size */
-    --fontSize-1: 5.6rem;
-    --fontSize-5: 3.2rem;
-
-  }
-
-  /* BOTÃO ENTRAR */
-
-  .header .btn {
-    display: flex;
-  }
-
-  /**
-   * REUSED STYLE
-   */
-
-  .container {
-    max-width: 100%;
-    width: 100%;
-    margin-inline: auto;
-  }
-
-  /**
-   * HERO
-   */
-
-  .hero .banner-outline {
-    max-width: 410px;
-  }
-
-  .hero .banner-outline::after {
-    right: -15px;
-  }
-
-  /**
-   * SERVICE
-   */
-
-  .service .container {
-    max-width: unset;
-  }
-
-  .service-list {
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-  .service-item {
-    width: 50%;
-  }
-
-  .service-item:nth-child(2n) {
-    border-inline-start: 1px solid var(--border-eerie-black);
-  }
-
-  .service-card .card-title {
-    --fontSize-5: 2.4rem;
-  }
-
-  /**
-   * ABOUT
-   */
-
-  .tab-btn-list {
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-  .tab-btn-item {
-    width: 50%;
-    flex-grow: 1;
-  }
-
-  .tab-btn-item:nth-child(2n) {
-    border-inline-start: 1px solid var(--border-eerie-black);
-  }
-
-  .tab-content {
-    padding: 40px;
-  }
-
-  .about-list {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .interview-card {
-    max-width: max-content;
-    margin-inline: auto;
-  }
-
-  /**
-   * TESTIMONIALS
-   */
-
-  .profile-card .card-banner {
-    display: block;
-    border-radius: var(--radius-circle);
-    width: 40%;
-  }
-
-  .testi .profile-card {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-  }
-
-}
-
 
 
 
@@ -1395,10 +1274,6 @@ textarea.input-field {
   border-radius: var(--radius-circle);
   width: 15%;
 }
-
-
-
-
 
 
 

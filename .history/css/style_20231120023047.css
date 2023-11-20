@@ -1137,7 +1137,7 @@ textarea.input-field {
    */
 
   .container {
-    max-width: 100%;
+    max-width: 540px;
     width: 100%;
     margin-inline: auto;
   }

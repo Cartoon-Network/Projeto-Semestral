@@ -1004,9 +1004,6 @@ textarea.input-field {
 
   }
 
-    /* BOTÃO ENTRAR */
-
-    .header .btn { display: flex; }
 
 
   /**
@@ -1107,127 +1104,6 @@ textarea.input-field {
 
 }
 
-
-@media (min-width: 730px) and (max-width: 1600px) {
-
-  /**
-   * CUSTOM PROPERTY
-   */
-
-  :root {
-
-    /**
-     * TYPOGRAPHY
-     */
-
-    /* font size */
-    --fontSize-1: 5.6rem;
-    --fontSize-5: 3.2rem;
-
-  }
-
-  /* BOTÃO ENTRAR */
-
-  .header .btn {
-    display: flex;
-  }
-
-  /**
-   * REUSED STYLE
-   */
-
-  .container {
-    max-width: 100%;
-    width: 100%;
-    margin-inline: auto;
-  }
-
-  /**
-   * HERO
-   */
-
-  .hero .banner-outline {
-    max-width: 410px;
-  }
-
-  .hero .banner-outline::after {
-    right: -15px;
-  }
-
-  /**
-   * SERVICE
-   */
-
-  .service .container {
-    max-width: unset;
-  }
-
-  .service-list {
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-  .service-item {
-    width: 50%;
-  }
-
-  .service-item:nth-child(2n) {
-    border-inline-start: 1px solid var(--border-eerie-black);
-  }
-
-  .service-card .card-title {
-    --fontSize-5: 2.4rem;
-  }
-
-  /**
-   * ABOUT
-   */
-
-  .tab-btn-list {
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-  .tab-btn-item {
-    width: 50%;
-    flex-grow: 1;
-  }
-
-  .tab-btn-item:nth-child(2n) {
-    border-inline-start: 1px solid var(--border-eerie-black);
-  }
-
-  .tab-content {
-    padding: 40px;
-  }
-
-  .about-list {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .interview-card {
-    max-width: max-content;
-    margin-inline: auto;
-  }
-
-  /**
-   * TESTIMONIALS
-   */
-
-  .profile-card .card-banner {
-    display: block;
-    border-radius: var(--radius-circle);
-    width: 40%;
-  }
-
-  .testi .profile-card {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-  }
-
-}
 
 
 
@@ -1395,10 +1271,6 @@ textarea.input-field {
   border-radius: var(--radius-circle);
   width: 15%;
 }
-
-
-
-
 
 
 
@@ -1966,16 +1838,14 @@ textarea.input-field {
   display: flex;
   align-items: center;
   margin-left: auto;
-  padding-right: 223px;
+  width: ;
 }
 
 .search-bar input {
-  padding: 12px; /* Adjust the padding as needed */
-  width: 480px; /* Adjust the width as needed */
+  padding: 8px;
   border: 1px solid var(--border-gainsboro);
   border-radius: 5px;
   margin-right: 5px;
-  color: #fff;
 }
 
 .search-btn {
@@ -2006,3 +1876,15 @@ textarea.input-field {
   margin-left: 5px;
 }
 
+/* Adjustments for responsive design */
+@media (max-width: 768px) {
+  .search-bar {
+      margin-left: 0;
+      order: 1;
+  }
+
+  .shopping-cart {
+      order: 2;
+      margin-left: auto;
+  }
+}
