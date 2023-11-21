@@ -236,14 +236,14 @@ function signInWithGoogle() {
     });
     
 // Open Product Details Modal
-function openProductDetails() {
-  var modal = document.getElementById('productDetailsModal');
+function openProductDetails(jjj) {
+  var modal = document.getElementById('productDetailsModal'+jjj);
   modal.style.display = 'block';
 }
 
 // Close Product Details Modal
-function closeProductDetails() {
-  var modal = document.getElementById('productDetailsModal');
+function closeProductDetails(jjj) {
+  var modal = document.getElementById('productDetailsModal'+jjj);
   modal.style.display = 'none';
 }
 
