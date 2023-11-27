@@ -161,7 +161,7 @@
   }
   
   .form-style {
-    width: calc(50% - 11px); /* 50% para o form-style e 50% para a câmera e botões, com espaço entre eles */
+    width: calc(150% - 20px); /* 50% para o form-style e 50% para a câmera e botões, com espaço entre eles */
     padding: 10px;
     margin-bottom: 10px;
     border: 1px solid #ccc;
@@ -209,23 +209,25 @@
   
   #camera {
     width: 100%;
-    max-width: 250px; /* Ajuste conforme necessário */
-    margin-left: 20px;
+    max-width: 260px; /* Ajuste conforme necessário */
+    margin-right: 138px;
     border-radius: 2px;
     margin-top: -270px;
+    background-color: #950101;
   }
   
   #foto-preview {
     width: 100%;
-    max-width: 150px; /* Ajuste conforme necessário */
-    height: 100px; /* Ajuste conforme necessário */
+    max-width: 150px;
+    height: 100px;
     background-size: cover;
     background-position: center;
-  }
+    background-image: url('./assets/images/semcamara.png');
+}
 
   .btn-left {
-    margin-right: 20px; /* Ajuste o valor conforme necessário para mover os botões para a esquerda */
-    right: 240px;
+    margin-right: 10px; /* Ajuste o valor conforme necessário para mover os botões para a esquerda */
+    left: 250px;
   }
 
   /* Adicione ícones usando Font Awesome ou outro conjunto de ícones aqui */
@@ -239,9 +241,9 @@
 }
 
 .btn-take-photo::before {
-    content: '\f030'; /* Ícone de câmera para o botão tirar foto (substitua pelo ícone desejado) */
+    content: url('https://api.iconify.design/line-md/arrow-align-bottom.svg?color=white');
 }
 
 .btn-close-camera::before {
-    content: '\f057'; /* Ícone de fechar para o botão fechar câmera (substitua pelo ícone desejado) */
+    content: url('https://api.iconify.design/tdesign/video-camera-off.svg?color=white');
 }
