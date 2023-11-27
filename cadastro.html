@@ -125,6 +125,16 @@
                 <input type="password" name="senha" class="form-style" placeholder="Sua Senha" id="senha" autocomplete="off">
                 <i class="input-icon uil uil-lock-alt"></i>
               </div>
+              <div class="form-group mt-2">
+                <video id="camera" autoplay></video>
+                <button type="submit"
+                class="btn btn:hover" onclick="abrirCamera()">Abrir Camera</button>
+                <button type="submit"
+                class="btn btn:hover" onclick="tirarFoto()">Tirar Foto</button>
+                <button  type="submit"
+                class="btn btn:hover"onclick="fechar()">Fechar Camera</button>
+                <div id="foto-preview"></div>
+            </div>
               <a href="#" class="btn mt-4" onclick="flipCard()">Voltar</a>
               <div class="social-buttons">
                 <button class="social-btn google-btn" onclick="signInWithGoogle()">
@@ -137,6 +147,7 @@
                   <i class="uil uil-facebook"></i> 
                 </button>
               </div>
+              
               <nav class="navbar" data-navbar>
 
               <ul class="navbar-list">

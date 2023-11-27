@@ -2019,3 +2019,21 @@ textarea.input-field {
   margin-left: 5px;
 }
 
+/*Tirar Foto*/
+
+#camera {
+  width: 100%;
+  max-width: 300px; /* Ajuste conforme necessário */
+  margin-bottom: 10px;
+}
+
+#foto-preview {
+  width: 100%;
+  max-width: 300px; /* Ajuste conforme necessário */
+  height: 200px; /* Ajuste conforme necessário */
+  background-size: cover;
+  background-position: center;
+  margin-top: 10px;
+}
+
+

@@ -254,3 +254,41 @@ window.onclick = function (event) {
       modal.style.display = 'none';
   }
 }
+
+var mediaStream;
+
+function abrirCamera() {
+    navigator.mediaDevices.getUserMedia({ video: true, audio: false })
+        .then(function (stream) {
+            mediaStream = stream;
+            const areaVideo = document.getElementById('camera');
+            areaVideo.srcObject = stream;
+        })
+        .catch(function (error) {
+            console.error('Não foi possível acessar a câmera:', error);
+        });
+}
+
+function tirarFoto() {
+    const areaVideo = document.getElementById('camera');
+    const canvas = document.createElement('canvas');
+    canvas.width = areaVideo.videoWidth;
+    canvas.height = areaVideo.videoHeight;
+    const context = canvas.getContext('2d');
+    context.drawImage(areaVideo, 0, 0, canvas.width, canvas.height);
+    const imageDataURL = canvas.toDataURL();
+    const fotoPreview = document.getElementById('foto-preview');
+    fotoPreview.style.backgroundImage = `url(${imageDataURL})`;
+
+    // Armazenar a foto no localStorage
+    localStorage.setItem('userPhoto', imageDataURL);
+}
+
+function fechar() {
+    if (mediaStream) {
+        mediaStream.getTracks()[0].stop();
+        const areaVideo = document.getElementById('camera');
+        areaVideo.srcObject = null;
+        mediaStream = null;
+    }
+}
