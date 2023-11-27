@@ -12,11 +12,13 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./assets/font/font.css">
   <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/cad.css">
   <link rel="preload" as="image" href="./assets/images/hero-banner.jpg">
   <link rel="preload" as="image" href="./assets/images/hero-shape-1.png">
   <link rel="preload" as="image" href="./assets/images/hero-shape-2.png">
   <link rel="icon" type="image/x-icon" href="./assets/images/dbgg5ml-5480b4b2-1a5a-4b91-b06f-699c8e9285f5-removebg-preview.png">
   <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
+  <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
 
 </head>
 <body id="top">
@@ -114,24 +116,21 @@
             <div class="card-back">
               <h4 class="mb-4 pb-3">Cadastre-se</h4>
               <div class="form-group1">
-                <input type="text" name="nome" class="form-style" placeholder="Seu Nome Completo" id="nome" autocomplete="off">
-                <i class="input-icon uil uil-user"></i>
+                <input type="text" name="nome" class="form-style1" placeholder="Seu Nome Completo" id="nome" autocomplete="off">
               </div> 
               <div class="form-group1 mt-2">
-                <input type="email" name="email" class="form-style" placeholder="Seu Email" id="email" autocomplete="off">
-                <i class="input-icon uil uil-at"></i>
+                <input type="email" name="email" class="form-style1" placeholder="Seu Email" id="email" autocomplete="off">
               </div> 
               <div class="form-group1 mt-2">
-                <input type="password" name="senha" class="form-style" placeholder="Sua Senha" id="senha" autocomplete="off">
-                <i class="input-icon uil uil-lock-alt"></i>
+                <input type="password" name="senha" class="form-style1" placeholder="Sua Senha" id="senha" autocomplete="off">
               </div>
               <!-- Espaço para tirar a foto de cadastro -->
                 <div class="form-group mt-2">
                 <video id="camera" autoplay></video>
-                <button onclick="abrirCamera()">Abrir Camera</button>
-                <button onclick="tirarFoto()">Tirar Foto</button>
-                <button onclick="fechar()">Fechar Camera</button>
-                <div id="foto-preview"></div>
+                <button class="btn btn-left btn-open-camera" onclick="abrirCamera()"></button>
+<button class="btn btn-left btn-take-photo" onclick="tirarFoto()"></button>
+<button class="btn btn-left btn-close-camera" onclick="fechar()"></button>
+
               </div>
               <a href="#" class="btn mt-4" onclick="flipCard()">Voltar</a>
               
@@ -139,6 +138,8 @@
 
               <ul class="navbar-list">
               <a href="index.html" class="navbar-link mt-4" onclick="flipCard()">Cancelar</a>
+              <a href="index.html" class="navbar-link mt-4" onclick="flipCard()">Cadastrar</a>
+
             </ul>
           </nav>
             </div>
