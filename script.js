@@ -270,19 +270,31 @@ function abrirCamera() {
 }
 
 function tirarFoto() {
-    const areaVideo = document.getElementById('camera');
-    const canvas = document.createElement('canvas');
-    canvas.width = areaVideo.videoWidth;
-    canvas.height = areaVideo.videoHeight;
-    const context = canvas.getContext('2d');
-    context.drawImage(areaVideo, 0, 0, canvas.width, canvas.height);
-    const imageDataURL = canvas.toDataURL();
-    const fotoPreview = document.getElementById('foto-preview');
-    fotoPreview.style.backgroundImage = `url(${imageDataURL})`;
+  const areaVideo = document.getElementById('camera');
+  const canvas = document.createElement('canvas');
+  canvas.width = areaVideo.videoWidth;
+  canvas.height = areaVideo.videoHeight;
+  const context = canvas.getContext('2d');
+  context.drawImage(areaVideo, 0, 0, canvas.width, canvas.height);
+  const imageDataURL = canvas.toDataURL();
 
-    // Armazenar a foto no localStorage
-    localStorage.setItem('userPhoto', imageDataURL);
+  // Salvar a foto no localStorage
+  localStorage.setItem('fotoRegistrada', imageDataURL);
+
+  const fotoPreviewForm = document.getElementById('foto-preview-form');
+  fotoPreviewForm.style.backgroundImage = `url(${imageDataURL})`;
 }
+
+// Recuperar a foto do localStorage
+const fotoRegistrada = localStorage.getItem('fotoRegistrada');
+
+// Se houver uma foto registrada, substituir o botão pela imagem
+if (fotoRegistrada) {
+  const navbarLink = document.querySelector('.navbar-link');
+  navbarLink.innerHTML = `<div id="imagemNaBarraDeNavegacao" style="background-image: url(${fotoRegistrada}); width: 50px; height: 50px;"></div>`;
+  // Adicione estilos adicionais conforme necessário
+}
+
 
 function fechar() {
     if (mediaStream) {
@@ -291,4 +303,17 @@ function fechar() {
         areaVideo.srcObject = null;
         mediaStream = null;
     }
+}
+
+function exibirFotoPreview(input) {
+  const fotoPreviewForm = document.getElementById('foto-preview-form');
+
+  if (input.files && input.files[0]) {
+      const reader = new FileReader();
+      reader.onload = function (e) {
+          const imageDataURL = e.target.result;
+          fotoPreviewForm.style.backgroundImage = `url(${imageDataURL})`;
+      };
+      reader.readAsDataURL(input.files[0]);
+  }
 }

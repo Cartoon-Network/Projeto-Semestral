@@ -226,8 +226,8 @@
 }
 
   .btn-left {
-    margin-right: 10px; /* Ajuste o valor conforme necessário para mover os botões para a esquerda */
-    left: 250px;
+    margin-right: 10px; 
+    align-items: center;
   }
 
   /* Adicione ícones usando Font Awesome ou outro conjunto de ícones aqui */
