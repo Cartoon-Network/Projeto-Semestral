@@ -1704,6 +1704,7 @@ textarea.input-field {
 .card-front,
 .card-back {
   width: 100%;
+  flex-direction: row;
   height: 100%;
   background-color: #000000;
   position: absolute;
@@ -1715,6 +1716,7 @@ textarea.input-field {
   justify-content: center;
   align-items: center;
   color: #fff;
+  margin-bottom: 10px;
   backface-visibility: hidden; /* Adiciona esta linha para corrigir o problema */
 }
 
@@ -1728,21 +1730,27 @@ textarea.input-field {
 }
 
 .form-group {
-  margin-bottom: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 10px;
 }
 
+.form-group1 {
+  padding-right: 58px;
+}
 .form-style {
-  padding: 15px 100px;
+  padding: 10px;
   height: 58px; 
   border: 1px solid #212121;
   color: #ffffff; 
   transition: all 200ms linear;
-  width: 100%;
+  width: 150px;
   font-weight: 500;
   font-size: 14px;
   line-height: 22px;
   letter-spacing: 0.5px;
-  padding-left: 100px;
+  border-radius: 5px;
 }
 
 .form-style:focus,
@@ -2023,17 +2031,16 @@ textarea.input-field {
 
 #camera {
   width: 100%;
-  max-width: 300px; /* Ajuste conforme necessário */
-  margin-bottom: 10px;
+  max-width: 150px; /* Ajuste conforme necessário */
+  margin-left: auto;
 }
 
 #foto-preview {
   width: 100%;
-  max-width: 300px; /* Ajuste conforme necessário */
-  height: 200px; /* Ajuste conforme necessário */
+  max-width: 150px; /* Ajuste conforme necessário */
+  height: 100px; /* Ajuste conforme necessário */
   background-size: cover;
   background-position: center;
-  margin-top: 10px;
 }
 
 

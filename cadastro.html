@@ -113,40 +113,27 @@
     
             <div class="card-back">
               <h4 class="mb-4 pb-3">Cadastre-se</h4>
-              <div class="form-group">
+              <div class="form-group1">
                 <input type="text" name="nome" class="form-style" placeholder="Seu Nome Completo" id="nome" autocomplete="off">
                 <i class="input-icon uil uil-user"></i>
               </div> 
-              <div class="form-group mt-2">
+              <div class="form-group1 mt-2">
                 <input type="email" name="email" class="form-style" placeholder="Seu Email" id="email" autocomplete="off">
                 <i class="input-icon uil uil-at"></i>
               </div> 
-              <div class="form-group mt-2">
+              <div class="form-group1 mt-2">
                 <input type="password" name="senha" class="form-style" placeholder="Sua Senha" id="senha" autocomplete="off">
                 <i class="input-icon uil uil-lock-alt"></i>
               </div>
-              <div class="form-group mt-2">
+              <!-- Espaço para tirar a foto de cadastro -->
+                <div class="form-group mt-2">
                 <video id="camera" autoplay></video>
-                <button type="submit"
-                class="btn btn:hover" onclick="abrirCamera()">Abrir Camera</button>
-                <button type="submit"
-                class="btn btn:hover" onclick="tirarFoto()">Tirar Foto</button>
-                <button  type="submit"
-                class="btn btn:hover"onclick="fechar()">Fechar Camera</button>
+                <button onclick="abrirCamera()">Abrir Camera</button>
+                <button onclick="tirarFoto()">Tirar Foto</button>
+                <button onclick="fechar()">Fechar Camera</button>
                 <div id="foto-preview"></div>
-            </div>
-              <a href="#" class="btn mt-4" onclick="flipCard()">Voltar</a>
-              <div class="social-buttons">
-                <button class="social-btn google-btn" onclick="signInWithGoogle()">
-                  <i class="uil uil-google"></i> 
-                </button>
-                <button class="social-btn microsoft-btn">
-                  <i class="uil uil-windows"></i> 
-                </button>
-                <button class="social-btn facebook-btn">
-                  <i class="uil uil-facebook"></i> 
-                </button>
               </div>
+              <a href="#" class="btn mt-4" onclick="flipCard()">Voltar</a>
               
               <nav class="navbar" data-navbar>
 
