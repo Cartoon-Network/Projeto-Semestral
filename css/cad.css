@@ -217,12 +217,11 @@
   }
   
   #foto-preview {
-    width: 100%;
-    max-width: 150px;
-    height: 100px;
+    width: 300px;
     background-size: cover;
-    background-position: center;
-    background-image: url('./assets/images/semcamara.png');
+    height: 250px;
+    width: 250px;
+
 }
 
   .btn-left {
@@ -247,3 +246,4 @@
 .btn-close-camera::before {
     content: url('https://api.iconify.design/tdesign/video-camera-off.svg?color=white');
 }
+
