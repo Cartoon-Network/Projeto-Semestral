@@ -317,3 +317,4 @@ function exibirFotoPreview(input) {
       reader.readAsDataURL(input.files[0]);
   }
 }
+
