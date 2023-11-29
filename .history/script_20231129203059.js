@@ -245,18 +245,9 @@ function cadastrar() {
     alert('Este email já está cadastrado. Por favor, use outro.');
   } else {
     // Adicionar novo usuário ao armazenamento local
-    var novoUsuario = { nome: nome, email: email, senha: senha, foto: fotoRegistrada };
+    var novoUsuario = { nome: nome, email: email, senha: senha };
     usuariosCadastrados.push(novoUsuario);
     localStorage.setItem('usuarios', JSON.stringify(usuariosCadastrados));
-
-    // Limpar as informações do formulário
-    document.getElementById('cadastroNome').value = '';
-    document.getElementById('cadastroEmail').value = '';
-    document.getElementById('cadastroSenha').value = '';
-    document.getElementById('fotoRegistrada').value = '';
-
-    // Limpar as informações do usuário
-    limparInformacoes();
 
     alert('Cadastro bem-sucedido! Você pode fazer login agora.');
     // Lógica para redirecionar ou realizar outras ações após o cadastro

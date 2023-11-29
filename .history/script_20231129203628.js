@@ -253,7 +253,7 @@ function cadastrar() {
     document.getElementById('cadastroNome').value = '';
     document.getElementById('cadastroEmail').value = '';
     document.getElementById('cadastroSenha').value = '';
-    document.getElementById('fotoRegistrada').value = '';
+    document.get
 
     // Limpar as informações do usuário
     limparInformacoes();

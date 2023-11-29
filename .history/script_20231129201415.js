@@ -232,8 +232,6 @@ function cadastrar() {
   var nome = document.getElementById('cadastroNome').value;
   var email = document.getElementById('cadastroEmail').value;
   var senha = document.getElementById('cadastroSenha').value;
-  var fotoRegistrada = localStorage.getItem('fotoRegistrada');
-
 
   // Verificar se o email já está cadastrado
   var usuariosCadastrados = JSON.parse(localStorage.getItem('usuarios')) || [];
@@ -245,18 +243,9 @@ function cadastrar() {
     alert('Este email já está cadastrado. Por favor, use outro.');
   } else {
     // Adicionar novo usuário ao armazenamento local
-    var novoUsuario = { nome: nome, email: email, senha: senha, foto: fotoRegistrada };
+    var novoUsuario = { nome: nome, email: email, senha: senha };
     usuariosCadastrados.push(novoUsuario);
     localStorage.setItem('usuarios', JSON.stringify(usuariosCadastrados));
-
-    // Limpar as informações do formulário
-    document.getElementById('cadastroNome').value = '';
-    document.getElementById('cadastroEmail').value = '';
-    document.getElementById('cadastroSenha').value = '';
-    document.getElementById('fotoRegistrada').value = '';
-
-    // Limpar as informações do usuário
-    limparInformacoes();
 
     alert('Cadastro bem-sucedido! Você pode fazer login agora.');
     // Lógica para redirecionar ou realizar outras ações após o cadastro
@@ -401,21 +390,7 @@ function selecionarArquivo() {
   var selectedFile = inputFile.files[0];
   
   if (selectedFile) {
-    // Salvar a foto no localStorage
-    const reader = new FileReader();
-    reader.onload = function (e) {
-      const imageDataURL = e.target.result;
-      localStorage.setItem('fotoRegistrada', imageDataURL);
-      
-      // Atualizar a visualização da foto
-      const fotoPreviewForm = document.getElementById('foto-preview-form');
-      fotoPreviewForm.style.backgroundImage = `url(${imageDataURL})`;
-
-      // Adicionar lógica adicional, se necessário
-
-      // Limpar as informações do usuário
-      limparInformacoes();
-    };
-    reader.readAsDataURL(selectedFile);
+      alert("Arquivo selecionado: " + selectedFile.name);
+      // Faça o que precisar com o arquivo selecionado
   }
 }
