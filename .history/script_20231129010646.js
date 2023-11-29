@@ -378,3 +378,28 @@ function exibirFotoPreview(input) {
   }
 }
 
+function exibirInformacoes() {
+  const informacoesUsuario = document.getElementById('informacoes-usuario');
+  const fotoRegistrada = localStorage.getItem('fotoRegistrada');
+  const usuarioAtual = JSON.parse(localStorage.getItem('usuarioAtual'));
+
+  if (usuarioAtual && fotoRegistrada) {
+    informacoesUsuario.innerHTML = `
+      <p>Nome: ${usuarioAtual.nome}</p>
+      <p>Email: ${usuarioAtual.email}</p>
+    `;
+    informacoesUsuario.style.display = 'block';
+  }
+}
+
+function sair() {
+  localStorage.removeItem('usuarioAtual');
+  localStorage.removeItem('fotoRegistrada');
+  limparInformacoes();
+}
+
+function limparInformacoes() {
+  const informacoesUsuario = document.getElementById('informacoes-usuario');
+  informacoesUsuario.innerHTML = '';
+  informacoesUsuario.style.display = 'none';
+}

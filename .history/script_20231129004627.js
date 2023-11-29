@@ -184,30 +184,6 @@ function flipCard() {
   card.style.transform = card.style.transform === 'rotateY(180deg)' ? 'rotateY(0deg)' : 'rotateY(180deg)';
 }
 
-function validarEntrada() {
-  const emailEntrada = document.getElementById('email').value;
-  const senhaEntrada = document.getElementById('senha').value;
-
-  if (!emailEntrada || !senhaEntrada) {
-    alert('Por favor, preencha todos os campos antes de entrar.');
-  } else {
-    // Continue com a lógica de login
-    // signIn(emailEntrada, senhaEntrada);
-  }
-}
-
-function validarCadastro() {
-  const nomeCadastro = document.getElementById('nome').value;
-  const emailCadastro = document.getElementById('cadastroEmail').value;
-  const senhaCadastro = document.getElementById('cadastroSenha').value;
-
-  if (!nomeCadastro || !emailCadastro || !senhaCadastro) {
-    alert('Por favor, preencha todos os campos antes de cadastrar.');
-  } else {
-    // Continue com a lógica de cadastro
-    // cadastrar(nomeCadastro, emailCadastro, senhaCadastro);
-  }
-}
 function entrar() {
   // Obter os valores dos campos de login
   var email = document.getElementById('loginEmail').value;

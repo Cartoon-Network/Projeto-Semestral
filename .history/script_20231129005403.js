@@ -184,30 +184,6 @@ function flipCard() {
   card.style.transform = card.style.transform === 'rotateY(180deg)' ? 'rotateY(0deg)' : 'rotateY(180deg)';
 }
 
-function validarEntrada() {
-  const emailEntrada = document.getElementById('email').value;
-  const senhaEntrada = document.getElementById('senha').value;
-
-  if (!emailEntrada || !senhaEntrada) {
-    alert('Por favor, preencha todos os campos antes de entrar.');
-  } else {
-    // Continue com a lógica de login
-    // signIn(emailEntrada, senhaEntrada);
-  }
-}
-
-function validarCadastro() {
-  const nomeCadastro = document.getElementById('nome').value;
-  const emailCadastro = document.getElementById('cadastroEmail').value;
-  const senhaCadastro = document.getElementById('cadastroSenha').value;
-
-  if (!nomeCadastro || !emailCadastro || !senhaCadastro) {
-    alert('Por favor, preencha todos os campos antes de cadastrar.');
-  } else {
-    // Continue com a lógica de cadastro
-    // cadastrar(nomeCadastro, emailCadastro, senhaCadastro);
-  }
-}
 function entrar() {
   // Obter os valores dos campos de login
   var email = document.getElementById('loginEmail').value;
@@ -318,15 +294,15 @@ window.onclick = function (event) {
 var mediaStream;
 
 function abrirCamera() {
-    navigator.mediaDevices.getUserMedia({ video: true, audio: false })
-        .then(function (stream) {
-            mediaStream = stream;
-            const areaVideo = document.getElementById('camera');
-            areaVideo.srcObject = stream;
-        })
-        .catch(function (error) {
-            console.error('Não foi possível acessar a câmera:', error);
-        });
+  navigator.mediaDevices.getUserMedia({ video: true, audio: false })
+    .then(function (stream) {
+      mediaStream = stream;
+      const areaVideo = document.getElementById('camera');
+      areaVideo.srcObject = stream;
+    })
+    .catch(function (error) {
+      console.error('Não foi possível acessar a câmera:', error);
+    });
 }
 
 function tirarFoto() {
@@ -345,36 +321,15 @@ function tirarFoto() {
   fotoPreviewForm.style.backgroundImage = `url(${imageDataURL})`;
 }
 
-// Recuperar a foto do localStorage
-const fotoRegistrada = localStorage.getItem('fotoRegistrada');
-
-// Se houver uma foto registrada, substituir o botão pela imagem
-if (fotoRegistrada) {
-  const entrarMobile = document.querySelector('.entrar-mobile');
-  entrarMobile.innerHTML = `<div id="imagemNaBarraDeNavegacao" style="background-image: url(${fotoRegistrada}); width: 50px; height: 50px; background-size: cover; border-radius: 15px"></div>`;
-  // Adicione estilos adicionais conforme necessário
-}
-
-
-function fechar() {
-    if (mediaStream) {
-        mediaStream.getTracks()[0].stop();
-        const areaVideo = document.getElementById('camera');
-        areaVideo.srcObject = null;
-        mediaStream = null;
-    }
-}
-
 function exibirFotoPreview(input) {
   const fotoPreviewForm = document.getElementById('foto-preview-form');
 
   if (input.files && input.files[0]) {
-      const reader = new FileReader();
-      reader.onload = function (e) {
-          const imageDataURL = e.target.result;
-          fotoPreviewForm.style.backgroundImage = `url(${imageDataURL})`;
-      };
-      reader.readAsDataURL(input.files[0]);
+    const reader = new FileReader();
+    reader.onload = function (e) {
+      const imageDataURL = e.target.result;
+      fotoPreviewForm.style.backgroundImage = `url(${imageDataURL})`;
+    };
+    reader.readAsDataURL(input.files[0]);
   }
 }
-

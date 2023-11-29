@@ -208,7 +208,7 @@
   /*Tirar Foto*/
   
   #camera {
-    width: 50%;
+    width: 100%;
     max-width: 260px; /* Ajuste conforme necessário */
     margin-right: 138px;
     border-radius: 2px;
@@ -221,6 +221,7 @@
     background-size: cover;
     height: 250px;
     width: 250px;
+
 }
 
   .btn-left {

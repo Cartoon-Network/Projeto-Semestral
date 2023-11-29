@@ -184,73 +184,13 @@ function flipCard() {
   card.style.transform = card.style.transform === 'rotateY(180deg)' ? 'rotateY(0deg)' : 'rotateY(180deg)';
 }
 
-function validarEntrada() {
-  const emailEntrada = document.getElementById('email').value;
-  const senhaEntrada = document.getElementById('senha').value;
-
-  if (!emailEntrada || !senhaEntrada) {
-    alert('Por favor, preencha todos os campos antes de entrar.');
-  } else {
-    // Continue com a lógica de login
-    // signIn(emailEntrada, senhaEntrada);
-  }
+function signInWithGoogle() {
+  // Implemente a lógica de autenticação com o Google aqui
+  // Por exemplo, você pode usar o Google Sign-In API
+  // https://developers.google.com/identity/sign-in/web/sign-in
+  console.log('Autenticar com Google');
 }
 
-function validarCadastro() {
-  const nomeCadastro = document.getElementById('nome').value;
-  const emailCadastro = document.getElementById('cadastroEmail').value;
-  const senhaCadastro = document.getElementById('cadastroSenha').value;
-
-  if (!nomeCadastro || !emailCadastro || !senhaCadastro) {
-    alert('Por favor, preencha todos os campos antes de cadastrar.');
-  } else {
-    // Continue com a lógica de cadastro
-    // cadastrar(nomeCadastro, emailCadastro, senhaCadastro);
-  }
-}
-function entrar() {
-  // Obter os valores dos campos de login
-  var email = document.getElementById('loginEmail').value;
-  var senha = document.getElementById('loginSenha').value;
-
-  // Verificar se o usuário está cadastrado
-  var usuariosCadastrados = JSON.parse(localStorage.getItem('usuarios')) || [];
-  var usuarioEncontrado = usuariosCadastrados.find(function (user) {
-    return user.email === email && user.senha === senha;
-  });
-
-  if (usuarioEncontrado) {
-    alert('Login bem-sucedido!');
-    // Lógica para redirecionar ou realizar outras ações após o login
-  } else {
-    alert('Usuário não encontrado. Verifique suas credenciais.');
-  }
-}
-
-function cadastrar() {
-  // Obter os valores dos campos de cadastro
-  var nome = document.getElementById('cadastroNome').value;
-  var email = document.getElementById('cadastroEmail').value;
-  var senha = document.getElementById('cadastroSenha').value;
-
-  // Verificar se o email já está cadastrado
-  var usuariosCadastrados = JSON.parse(localStorage.getItem('usuarios')) || [];
-  var emailExistente = usuariosCadastrados.some(function (user) {
-    return user.email === email;
-  });
-
-  if (emailExistente) {
-    alert('Este email já está cadastrado. Por favor, use outro.');
-  } else {
-    // Adicionar novo usuário ao armazenamento local
-    var novoUsuario = { nome: nome, email: email, senha: senha };
-    usuariosCadastrados.push(novoUsuario);
-    localStorage.setItem('usuarios', JSON.stringify(usuariosCadastrados));
-
-    alert('Cadastro bem-sucedido! Você pode fazer login agora.');
-    // Lógica para redirecionar ou realizar outras ações após o cadastro
-  }
-}
     function mostrarSubpagina(imagemSrc, titulo, descricao) {
         // Preencher os dados da subpágina
         document.getElementById('subpagina-imagem').innerHTML = '<img src="' + imagemSrc + '" alt="Imagem do Projeto">';
@@ -350,8 +290,8 @@ const fotoRegistrada = localStorage.getItem('fotoRegistrada');
 
 // Se houver uma foto registrada, substituir o botão pela imagem
 if (fotoRegistrada) {
-  const entrarMobile = document.querySelector('.entrar-mobile');
-  entrarMobile.innerHTML = `<div id="imagemNaBarraDeNavegacao" style="background-image: url(${fotoRegistrada}); width: 50px; height: 50px; background-size: cover; border-radius: 15px"></div>`;
+  const navbarLink = document.querySelector('.entrar-mobile');
+  navbarLink.innerHTML = `<div id="imagemNaBarraDeNavegacao" style="background-image: url(${fotoRegistrada}); width: 50px; height: 50px; background-size: cover; border-radius: 15px"></div>`;
   // Adicione estilos adicionais conforme necessário
 }
 
