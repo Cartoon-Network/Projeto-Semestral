@@ -378,6 +378,7 @@ function selecionarArquivo() {
 
             // Atualizar a visualização da foto no foto-preview
             fotoPreview.style.backgroundImage = `url(${imageDataURL})`;
+
             // Remover o botão
             document.querySelector('.btn-take-photo').style.display = 'none';
 
