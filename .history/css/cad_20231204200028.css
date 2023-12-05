@@ -122,7 +122,29 @@
     transition: all 200ms linear;
   }
   
+  .social-btn i {
+    font-size: 24px; /* Ajuste o tamanho do ícone conforme necessário */
+    margin-right: 0px;
+  }
   
+  .google-btn {
+    background-color: #ff5252;
+    color: #fff;
+  }
+  
+  .microsoft-btn {
+    background-color: #0078d4;
+    color: #fff;
+  }
+  
+  .facebook-btn {
+    background-color: #4267B2;
+    color: #fff;
+  }
+  
+  .social-btn:hover {
+    filter: brightness(1.2);
+  }
   
   /* Responsive Styles */
   @media (max-width: 768px) {
@@ -134,8 +156,8 @@
   
   /* Form Styles */
   .form-group {
-    margin-bottom: -20px;
-    
+    position: relative;
+    margin-bottom: 1px;
   }
   
   .form-style {
@@ -146,6 +168,25 @@
     border-radius: 5px;
   }
   
+  .input-icon {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+  }
+  
+  /* Social Buttons */
+  .social-buttons {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+  }
+  
+  .social-btn {
+    padding: 0px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
   
   /* Responsive Styles for Buttons */
   .btn {
@@ -153,14 +194,6 @@
     padding: 10px;
     border-radius: 5px;
     cursor: pointer;
-    display: inline-block;
-    margin-right: 10px; /* Espaçamento entre os botões, ajuste conforme necessário */
-
-  }
-
-  .btn-group {
-    display: flex;    
-    top: -210%;
   }
   
   /* Additional Styling for Responsive Links */
@@ -174,17 +207,26 @@
   
   /*Tirar Foto*/
   
+  #camera {
+    width: 50%;
+    max-width: 260px; /* Ajuste conforme necessário */
+    margin-right: 138px;
+    border-radius: 2px;
+    margin-top: -270px;
+    background-color: #950101;
+  }
+  
   #foto-preview {
-    width: 200px; 
-    height: 200px; 
-    border: 1px solid #ccc; 
-    background-size: cover; 
-    margin-right: 310px; /* Ajuste o valor conforme necessário para mover para a esquerda */
-    margin-top: -100px; 
-    transform: translateY(-50%); 
+    width: 300px;
+    background-size: cover;
+    height: 250px;
+    width: 250px;
 }
 
-
+  .btn-left {
+    margin-right: 10px; 
+    align-items: center;
+  }
 
   /* Adicione ícones usando Font Awesome ou outro conjunto de ícones aqui */
 .btn::before {
@@ -192,8 +234,7 @@
     font-size: 20px; /* Ajuste conforme necessário */
 }
 
-.btn-take-photo::before {
-    content: url('https://api.iconify.design/line-md/arrow-align-bottom.svg?color=white');    
-    border-radius: 100px;
 
+.btn-take-photo::before {
+    content: url('https://api.iconify.design/line-md/arrow-align-bottom.svg?color=white');
 }

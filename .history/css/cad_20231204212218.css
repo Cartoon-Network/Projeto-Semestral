@@ -161,7 +161,6 @@
   .btn-group {
     display: flex;    
     top: -210%;
-  }
   
   /* Additional Styling for Responsive Links */
   .link {
@@ -193,7 +192,5 @@
 }
 
 .btn-take-photo::before {
-    content: url('https://api.iconify.design/line-md/arrow-align-bottom.svg?color=white');    
-    border-radius: 100px;
-
+    content: url('https://api.iconify.design/line-md/arrow-align-bottom.svg?color=white');
 }

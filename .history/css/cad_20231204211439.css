@@ -148,20 +148,17 @@
   
   
   /* Responsive Styles for Buttons */
-  .btn {
-    margin-top: 20px;
+  .btn-group {
+    display: flex;
+}
+
+.btn {
     padding: 10px;
     border-radius: 5px;
     cursor: pointer;
-    display: inline-block;
     margin-right: 10px; /* Espaçamento entre os botões, ajuste conforme necessário */
-
-  }
-
-  .btn-group {
-    display: flex;    
-    top: -210%;
-  }
+    top: ;
+}
   
   /* Additional Styling for Responsive Links */
   .link {
@@ -193,7 +190,5 @@
 }
 
 .btn-take-photo::before {
-    content: url('https://api.iconify.design/line-md/arrow-align-bottom.svg?color=white');    
-    border-radius: 100px;
-
+    content: url('https://api.iconify.design/line-md/arrow-align-bottom.svg?color=white');
 }

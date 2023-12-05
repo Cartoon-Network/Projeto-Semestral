@@ -190,10 +190,9 @@
 .btn::before {
     font-family: 'FontAwesome'; /* Substitua pelo conjunto de ícones que você está usando */
     font-size: 20px; /* Ajuste conforme necessário */
+    border-radius:
 }
 
 .btn-take-photo::before {
-    content: url('https://api.iconify.design/line-md/arrow-align-bottom.svg?color=white');    
-    border-radius: 100px;
-
+    content: url('https://api.iconify.design/line-md/arrow-align-bottom.svg?color=white');
 }

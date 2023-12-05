@@ -134,7 +134,8 @@
   
   /* Form Styles */
   .form-group {
-    margin-bottom: -20px;
+    position: relative;
+    margin-bottom: -10px;
     
   }
   
@@ -154,13 +155,6 @@
     border-radius: 5px;
     cursor: pointer;
     display: inline-block;
-    margin-right: 10px; /* Espaçamento entre os botões, ajuste conforme necessário */
-
-  }
-
-  .btn-group {
-    display: flex;    
-    top: -210%;
   }
   
   /* Additional Styling for Responsive Links */
@@ -193,7 +187,5 @@
 }
 
 .btn-take-photo::before {
-    content: url('https://api.iconify.design/line-md/arrow-align-bottom.svg?color=white');    
-    border-radius: 100px;
-
+    content: url('https://api.iconify.design/line-md/arrow-align-bottom.svg?color=white');
 }
