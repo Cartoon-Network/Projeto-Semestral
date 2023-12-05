@@ -303,7 +303,7 @@ body.nav-active { overflow: hidden; }
 .nav-open-btn .line {
   width: 24px;
   height: 2px;
-  background-color: var(--bg-black);
+  background-color: var(--bg-white);
   transition: var(--transition-1);
 }
 
@@ -314,7 +314,7 @@ body.nav-active { overflow: hidden; }
    transform: scaleX(0.7); }
 
 .nav-open-btn::before { background-color: 
-  var(--bg-white); }
+  var(--bg-black); }
 
 .nav-open-btn::after { background-color: 
   var(--bg-black); }
@@ -1005,6 +1005,7 @@ textarea.input-field {
   }
 
 }
+
 
 
 @media (min-width: 730px) and (max-width: 1600px) {
