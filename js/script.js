@@ -329,40 +329,41 @@ window.onclick = function (event) {
 
 
 
-const entrarMobile = document.querySelector('.entrar-mobile');
-const fotoPreview = document.getElementById('foto-preview');
-const inputFile = document.getElementById('inputFile');
 
-// Recuperar a foto do localStorage
+
+
+
+
 const fotoRegistrada = localStorage.getItem('fotoRegistrada');
+const fotoPreview = document.getElementById('foto-preview');
+const entrarMobile = document.querySelector('.entrar-mobile');
+const inputFile = document.getElementById('inputFile');
+const fotoTeste = document.getElementById('fotoTeste')
 
-console.log('Foto registrada:', fotoRegistrada);
-
-// Se houver uma foto registrada, substituir o botão pela imagem
 if (fotoRegistrada) {
-    console.log('Exibindo foto registrada.');
-
-    // Atualizar a visualização da foto no lugar original
-    entrarMobile.innerHTML = `<div id="imagemNaBarraDeNavegacao" style="background-image: url(${fotoRegistrada}); width: 50px; height: 50px; background-size: cover; border-radius: 15px"></div>`;
-
-    // Atualizar a visualização da foto no foto-preview
+  const entrarMobile = document.querySelector('.entrar-mobile');
+  const fotoPreview = document.getElementById('foto-preview');
+  entrarMobile.innerHTML = `<div id="imagemNaBarraDeNavegacao" style="background-image: url(${fotoRegistrada}); width: 50px; height: 50px; background-size: cover; border-radius: 15px"></div>`;
     fotoPreview.style.backgroundImage = `url(${fotoRegistrada})`;
-    // Adicione estilos adicionais conforme necessário
+    fotoTeste.style.backgroundImage = `url(${fotoRegistrada})`;
+    fotoTeste.style.width = "50px"
+    // Atualizar a visualização da foto no lugar original
+    
+    // entrarMobile.innerHTML =  `<div id="imagemNaBarraDeNavegacao" style="background-image: url(${fotoRegistrada}); width: 50px; height: 50px; background-size: cover; border-radius: 15px"></div>`;
 } else {
     console.log('Configurando eventos para escolher arquivo.');
 
     // Se não houver uma foto registrada, configurar os eventos do botão
-    inputFile.addEventListener('change', selecionarArquivo);
+    entrarMobile.addEventListener('click', escolherArquivo);
 }
 
 function escolherArquivo() {
-    console.log('Escolher arquivo foi chamado.');
     // Simula o clique no input de arquivo oculto
     inputFile.click();
 }
 
 function selecionarArquivo() {
-    console.log('Selecionar arquivo foi chamado.');
+    // Lógica para lidar com a seleção de arquivo aqui
     var selectedFile = inputFile.files[0];
     
     if (selectedFile) {
@@ -371,14 +372,13 @@ function selecionarArquivo() {
         reader.onload = function (e) {
             const imageDataURL = e.target.result;
             console.log('Imagem carregada:', imageDataURL);
+            const fotoPreview = document.getElementById('foto-preview');
             localStorage.setItem('fotoRegistrada', imageDataURL);
-            
+            const entrarMobile = document.querySelector('.entrar-mobile');
             // Atualizar a visualização da foto no lugar original
             entrarMobile.innerHTML = `<div id="imagemNaBarraDeNavegacao" style="background-image: url(${imageDataURL}); width: 50px; height: 50px; background-size: cover; border-radius: 15px"></div>`;
-
-            // Atualizar a visualização da foto no foto-preview
+            // Atualizar a visualização da foto
             fotoPreview.style.backgroundImage = `url(${imageDataURL})`;
-            // Remover o botão
             document.querySelector('.btn-take-photo').style.display = 'none';
 
             // Adicionar lógica adicional, se necessário
