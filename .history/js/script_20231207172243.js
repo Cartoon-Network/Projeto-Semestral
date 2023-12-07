@@ -401,40 +401,23 @@ function selecionarArquivo() {
 
 
 
-
-
-// Sample data
-const produtos = [
-  { nome: "Anti-Bombeiro Bot", preco: 8000 },
-  { nome: "Abelhabot", preco: 20000 },
-  { nome: "Robô-Fogo", preco: 10999 },
-  { nome: "Cowbot", preco: 10000 },
-  { nome: "Orbot", preco: 100000 },
-  { nome: "Obliteratorbot", preco: 15500 }
-];
-
 // Function to filter products based on search input
 function filterProducts() {
-  const termo = document.getElementById("searchInput").value.toLowerCase();
-  const resultados = produtos.filter(produto => produto.nome.toLowerCase().includes(termo));
-  const listaProdutos = document.getElementById("produtos-lista");
-  listaProdutos.innerHTML = "";
+  var input, filter, products, product, i, txtValue;
+  input = document.getElementById("searchInput");
+  filter = input.value.toUpperCase();
+  products = document.getElementsByClassName("product-card");
 
-  resultados.forEach(produto => {
-    const novoItem = document.createElement("div");
-    novoItem.classList.add("produto");
-    novoItem.innerHTML = `
-      <div class="imagem">
-        <img src="img/${produto.nome}.jpg" alt="">
-      </div>
-      <div class="infos">
-        <h3>${produto.nome}</h3>
-        <p>R$ ${produto.preco.toFixed(2)}</p>
-        <button onclick="adicionarAoCarrinho('${produto.nome}', ${produto.preco})">Adicionar ao Carrinho</button>
-      </div>
-    `;
-    listaProdutos.appendChild(novoItem);
-  });
+  for (i = 0; i < products.length; i++) {
+    product = products[i];
+    txtValue = product.textContent || product.innerText;
+
+    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+      product.style.display = "";
+    } else {
+      product.style.display = "none";
+    }
+  }
 }
 
 // Function to open product details modal

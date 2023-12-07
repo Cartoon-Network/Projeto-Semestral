@@ -396,20 +396,11 @@ function selecionarArquivo() {
 }
 
 
-
-
-
-
-
-
-
 // Sample data
 const produtos = [
   { nome: "Anti-Bombeiro Bot", preco: 8000 },
   { nome: "Abelhabot", preco: 20000 },
-  { nome: "Robô-Fogo", preco: 10999 },
-  { nome: "Cowbot", preco: 10000 },
-  { nome: "Orbot", preco: 100000 },
+  // ... Add other product data ...
   { nome: "Obliteratorbot", preco: 15500 }
 ];
 

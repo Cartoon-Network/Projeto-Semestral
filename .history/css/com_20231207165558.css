@@ -81,7 +81,7 @@
   }
   
   .payment-methods h4 {
-    color: white;
+    color: #;
   }
   
   .payment-methods ul {
@@ -111,7 +111,7 @@
   
   .price {
     font-weight: var(--weight-medium);
-    color: var(--text-white);
+    color: var(--text-black);
   }
   
   /* Search Bar */

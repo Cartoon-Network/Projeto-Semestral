@@ -407,9 +407,7 @@ function selecionarArquivo() {
 const produtos = [
   { nome: "Anti-Bombeiro Bot", preco: 8000 },
   { nome: "Abelhabot", preco: 20000 },
-  { nome: "Robô-Fogo", preco: 10999 },
-  { nome: "Cowbot", preco: 10000 },
-  { nome: "Orbot", preco: 100000 },
+  { nome: "Robô-Fogo", preco: 10999}
   { nome: "Obliteratorbot", preco: 15500 }
 ];
 
