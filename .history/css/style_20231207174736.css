@@ -1159,7 +1159,7 @@ textarea.input-field {
 
   }
 
-  
+
 
   /**
    * REUSED STYLE
@@ -1531,7 +1531,7 @@ textarea.input-field {
    * HEADER
    */
 
-  .header { padding-inline: 90px; }
+  .header { padding-inline: 90px; width: 81%;}
 
 
 

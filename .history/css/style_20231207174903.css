@@ -1159,7 +1159,10 @@ textarea.input-field {
 
   }
 
-  
+
+  .header {
+    width: 81%;
+  }
 
   /**
    * REUSED STYLE

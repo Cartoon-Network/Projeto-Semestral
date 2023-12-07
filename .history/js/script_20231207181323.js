@@ -336,6 +336,12 @@ window.onclick = function (event) {
 
 
 
+
+
+
+
+
+
 const fotoRegistrada = localStorage.getItem('fotoRegistrada');
 const fotoPreview = document.getElementById('foto-preview');
 const entrarMobile = document.querySelector('.entrar-mobile');
@@ -388,3 +394,12 @@ function selecionarArquivo() {
         reader.readAsDataURL(selectedFile);
     }
 }
+
+
+
+
+
+
+
+
+
