@@ -198,10 +198,9 @@
     height: 200px; 
     border: 1px solid #ccc; 
     background-size: cover; 
-    margin-right: 310px; /* Ajuste o valor conforme necessário para mover para a esquerda */
+    margin-right: 4010px; /* Ajuste o valor conforme necessário para mover para a esquerda */
     margin-top: -100px; 
-    transform: translateY(-50%);
-    
+    transform: translateY(-50%); 
 }
 
 
@@ -216,9 +215,4 @@
     content: url('https://api.iconify.design/line-md/arrow-align-bottom.svg?color=white');    
     border-radius: 100px;
 
-}
-
-.btn-take-photo {
-  padding-right: 200px;
-  align-items:center;
 }

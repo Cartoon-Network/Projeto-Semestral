@@ -215,10 +215,6 @@
 .btn-take-photo::before {
     content: url('https://api.iconify.design/line-md/arrow-align-bottom.svg?color=white');    
     border-radius: 100px;
+    right: ;
 
-}
-
-.btn-take-photo {
-  padding-right: 200px;
-  align-items:center;
 }

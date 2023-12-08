@@ -165,6 +165,10 @@
   margin-right: 10px; /* Espaçamento entre os botões, ajuste conforme necessário */
 
 }
+
+.btn-take-photo::before {
+  left: 10px;
+}
   }
   
   
@@ -219,6 +223,5 @@
 }
 
 .btn-take-photo {
-  padding-right: 200px;
-  align-items:center;
+  padding-right: 265px;
 }
