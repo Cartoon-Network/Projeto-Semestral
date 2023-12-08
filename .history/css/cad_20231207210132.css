@@ -156,14 +156,8 @@
   padding-right: 100px;
 }
 
-.btn {
-  margin-top: 20px;
-  padding: 10px;
-  border-radius: 5px;
-  cursor: pointer;
-  display: inline-block;
-  margin-right: 10px; /* Espaçamento entre os botões, ajuste conforme necessário */
-
+.btn btn:hover {
+  
 }
   }
   
@@ -177,6 +171,7 @@
     cursor: pointer;
     display: inline-block;
     margin-right: 10px; /* Espaçamento entre os botões, ajuste conforme necessário */
+
   }
 
   .btn-group {

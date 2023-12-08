@@ -177,6 +177,7 @@
     cursor: pointer;
     display: inline-block;
     margin-right: 10px; /* Espaçamento entre os botões, ajuste conforme necessário */
+
   }
 
   .btn-group {

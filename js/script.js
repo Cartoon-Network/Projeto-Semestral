@@ -388,3 +388,5 @@ function selecionarArquivo() {
         reader.readAsDataURL(selectedFile);
     }
 }
+
+

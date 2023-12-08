@@ -357,6 +357,8 @@ body.nav-active { overflow: hidden; }
   font-size: 2rem;
   display: grid;
   place-items: center;
+  background: url('https://api.iconify.design/teenyicons/x-solid.svg?color=white') no-repeat center center / contain;
+
 }
 
 .nav-close-btn ion-icon { 
@@ -1258,7 +1260,6 @@ textarea.input-field {
   border-radius: var(--radius-circle);
   width: 15%;
 }
-
 
 
 
