@@ -410,3 +410,13 @@ function validateAndSubmit() {
   window.location.href = 'index.html';
 
 }
+
+function showConfirmationAlert() {
+  var confirmResult = confirm("Você quer comprar esse produto?");
+  if (confirmResult) {
+    // Aqui você pode adicionar a lógica para realizar a compra
+    alert("Compra realizada com sucesso!");
+  } else {
+    alert("Compra cancelada.");
+  }
+}
