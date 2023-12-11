@@ -399,4 +399,14 @@ function selecionarArquivo() {
     }
 }
 
+function validateAndSubmit() {
+  var nomeInput = document.getElementById('nome');
 
+  if (nomeInput.value.trim() === '') {
+    alert('O nome é essencial para efetuar o cadastro.');
+    return;
+  }
+
+  window.location.href = 'index.html';
+
+}
