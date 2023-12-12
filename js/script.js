@@ -1,4 +1,8 @@
+//O uso de 'use strict'; ativa o "modo estrito" do JavaScript, que impõe um conjunto mais rigoroso de regras e boas práticas, ajudando a evitar erros comuns.
+
 'use strict';
+
+
 
 /*PRE-CARREGAMENTO*/
 
@@ -12,6 +16,8 @@ window.addEventListener("DOMContentLoaded",
 });
 
 
+
+
 /* Adicionar Evento em Múltiplos Elementos */
 
 const addEventOnElements =
@@ -21,6 +27,7 @@ const addEventOnElements =
     elements[i].addEventListener(eventType, callback);
   }555555555
 }
+
 
 
 
@@ -50,6 +57,7 @@ addEventOnElements(navLinks, "click", function () {
 
 
 
+
 /* Cabeçalho Ativo no Rolamento */
 
 const header = 
@@ -62,37 +70,45 @@ window.addEventListener("scroll", function () {
 
 
 
-/* Efeito de Inclinação em Elementos
-javascript */
+
+
+/* Efeito de Inclinação em Elementos javascript */
 
 const tiltElements = 
 document.querySelectorAll("[data-tilt]");
-
 const initTilt = function (event) {
 
-  // Cálculo do efeito de inclinação
+  // Cálculo do efeito de inclinação - determinam o centro do elemento em relação á sua largura e altura, respectivamente.
   const centerX = this.offsetWidth / 2;
   const centerY = this.offsetHeight / 2;
 
+  // Calculam a posição do mouse em relação ao centro do elemento.
   const tiltPosY = 
   ((event.offsetX - centerX) / centerX) * 10;
   const tiltPosX = 
   ((event.offsetY - centerY) / centerY) * 10;
 
+  // Aplica o efieto de inclinação ao elemento
   this.style.transform =
-   `perspective(1000px) rotateX(${tiltPosX}deg)
-    rotateY(${tiltPosY - (tiltPosY * 2)}deg)`;
 
+  // Define a perspectiva dav transformação 3D.
+   `perspective(1000px) rotateX(${tiltPosX}deg)
+  
+    rotateY(${tiltPosY - (tiltPosY * 2)}deg)`;
+  // Rotacinam o elemento em torno dos eixos x e y respectivamente, criando o efeito de inclinação.
 }
 
+// Ativação pelo movimento do mouse.
 addEventOnElements(tiltElements,
    "mousemove", initTilt);
 
+   // Repouso da imagem ao tirar o mouse de cima da imagem.
 addEventOnElements(tiltElements, 
   "mouseout", function () {
   this.style.transform = 
   `perspective(1000px) rotateX(0deg) rotateY(0deg)`;
 });
+
 
 
 
@@ -131,6 +147,7 @@ addEventOnElements(tabBtns, "click", filterContent);
 
 
 
+
 /* Cursor Personalizado */
 
 const cursors =
@@ -147,11 +164,11 @@ window.addEventListener("mousemove",
   const posX = event.clientX;
   const posY = event.clientY;
 
-  /** cursor dot position */
+/** posição do ponto do cursor */
   cursors[0].style.left = `${posX}px`;
   cursors[0].style.top = `${posY}px`;
 
-  /** cursor outline position */
+/** posição do contorno do cursor */
   setTimeout(function () {
     cursors[1].style.left = `${posX}px`;
     cursors[1].style.top = `${posY}px`;
@@ -178,7 +195,10 @@ addEventOnElements(hoveredElements,
   
 });
 
-// Login e Cadastr-se //
+
+
+
+// Login e Cadastre-se //
 
 function flipCard() {
   var card = document.getElementById('card');
@@ -270,6 +290,10 @@ function cadastrar() {
   }
 }
 
+// Subpagina//
+
+
+
 
     function mostrarSubpagina(imagemSrc, titulo, descricao) {
         // Preencher os dados da subpágina
@@ -345,6 +369,8 @@ window.onclick = function (event) {
 
 
 
+// Foto Registrada//
+
 const fotoRegistrada = localStorage.getItem('fotoRegistrada');
 const fotoPreview = document.getElementById('foto-preview');
 const entrarMobile = document.querySelector('.entrar-mobile');
@@ -393,6 +419,10 @@ function selecionarArquivo() {
         reader.readAsDataURL(selectedFile);
     }
 }
+
+
+
+//Alert//
 
 function validateAndSubmit() {
   var nomeInput = document.getElementById('nome');
