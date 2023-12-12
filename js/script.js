@@ -4,7 +4,7 @@
 
 
 
-/*PRE-CARREGAMENTO*/
+/*PRE-CARREGAMENTO*/ //id e class
 
 const preloader = 
 document.querySelector("[data-preloader]");
