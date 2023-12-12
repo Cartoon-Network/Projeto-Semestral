@@ -20,6 +20,8 @@ window.addEventListener("DOMContentLoaded",
 
 /* Adicionar Evento em Múltiplos Elementos */
 
+
+// Recebe uma lista de elementos, o tipo de evento(eventType), e a função de retorno. Itera sobre os elementos e adiciona o evento com função de retorno (callback)  especifica.
 const addEventOnElements =
  function (elements, eventType, callback) {
   for (let i = 0, len = elements.length; 
