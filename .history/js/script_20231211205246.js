@@ -389,6 +389,8 @@ function selecionarArquivo() {
             // Atualizar a visualização da foto
             fotoPreview.style.backgroundImage = `url(${imageDataURL})`;
             document.querySelector('.btn-take-photo').style.display = 'none';
+
+            // Adicionar lógica adicional, se necessário
         };
         reader.readAsDataURL(selectedFile);
     }

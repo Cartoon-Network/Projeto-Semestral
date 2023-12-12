@@ -175,7 +175,6 @@ addEventOnElements(hoveredElements,
     i < len; i++) {
     cursors[i].classList.remove("hovered");
   }
-  
 });
 
 // Login e Cadastr-se //
@@ -349,12 +348,14 @@ const fotoRegistrada = localStorage.getItem('fotoRegistrada');
 const fotoPreview = document.getElementById('foto-preview');
 const entrarMobile = document.querySelector('.entrar-mobile');
 const inputFile = document.getElementById('inputFile');
+const fotoTeste = document.getElementById('fotoTeste')
 
 if (fotoRegistrada) {
   const entrarMobile = document.querySelector('.entrar-mobile');
   const fotoPreview = document.getElementById('foto-preview');
   entrarMobile.innerHTML = `<div id="imagemNaBarraDeNavegacao" style="background-image: url(${fotoRegistrada}); width: 50px; height: 50px; background-size: cover; border-radius: 15px"></div>`;
     fotoPreview.style.backgroundImage = `url(${fotoRegistrada})`;
+    fotoTeste.style.backgroundImage = `url(${fotoRegistrada})`;
     fotoTeste.style.width = "50px"
     // Atualizar a visualização da foto no lugar original
     
@@ -389,6 +390,8 @@ function selecionarArquivo() {
             // Atualizar a visualização da foto
             fotoPreview.style.backgroundImage = `url(${imageDataURL})`;
             document.querySelector('.btn-take-photo').style.display = 'none';
+
+            // Adicionar lógica adicional, se necessário
         };
         reader.readAsDataURL(selectedFile);
     }
